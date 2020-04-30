@@ -12,7 +12,10 @@ def index():
 
 @svelte('Alternate')
 def page2():
-    return {}
+    return {'nested_data': {'nest 1': {'id': 1, 'value': 35, 'deeper': {'boolean': True}},
+                            'nest 2': {'id': 2, 'value': 12, 'deeper': {'boolean': False}},
+                            'nest 3': {'id': 3, 'value': 64, 'deeper': {'boolean': None}},
+                            }}
 
 
 def non_svelte():

@@ -36,7 +36,7 @@ Svelte is normally used for single-page applications (SPA), but there are multip
 
 ## Demo pages
 - default/index shows that you can give information from the backend to the front-end
-- default/page2 
+- default/page2: demo of some Svelte features
 - default/non_svelte shows that you can show pages without svelte
 
 ## TODO:

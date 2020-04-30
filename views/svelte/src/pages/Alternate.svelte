@@ -2,14 +2,26 @@
     /* styles written here will be compiled into bundle.css, but scoped to this page!
      You can use additional processors like SCSS or LESS, using plugins.
      */
+
+    /*colors from http://c0bra.github.io/color-scheme-js/*/
     .failure {
         background-color: #bf6060;
     }
+
     .loading {
         background-color: #fff5bf
     }
+
     .success {
         background-color: #9ecc8f
+    }
+
+    .time {
+        background-color: #ff80f4;
+    }
+
+    .blue {
+        background-color: #60a5bf;
     }
 </style>
 <script>
@@ -19,6 +31,9 @@
 
     // importing a component
     import Buttons from '../components/Buttons.svelte';
+    import Nested from '../components/Nested.svelte';
+
+    export let nested_data;
 
     let time;
     let slow_class = 'loading';
@@ -70,5 +85,12 @@
     </div>
 
     <!-- using a component as if it were normal HTML -->
-    <Buttons/>
+    <Buttons />
+
+    <!-- if you want to use data in a component, you need to pass it -->
+
+
+    <div class="blue">
+        <Nested {nested_data} />
+    </div>
 </main>
