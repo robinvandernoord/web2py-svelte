@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset='utf-8'>
+        <meta name='viewport' content='width=device-width,initial-scale=1'>
+
+        <title>Svelte app</title>
+
+        <link rel='icon' type='image/png' href='{{=URL('static', 'images/favicon.png')}}'>
+        <link rel='stylesheet' href='{{=URL('static', 'svelte.css')}}'>
+        <link rel='stylesheet' href='{{=URL('static', 'build/bundle.css')}}'>
+
+        <script>
+            // svelte kan bij window, dus zo kunnen we de gewenste pagina en controller ouput doorgeven
+            window.view = '{{=response._vars.get('_page', 'Index')}}';
+            window.data = JSON.parse('{{=XML(json.dumps(response._vars))}}');
+
+            // function to resolve the route to api/endpoint, no matter what web2py app you are in
+            window.appname = '{{=request.application}}';
+        </script>
+
+        <script defer src='{{=URL('static', 'build/bundle.js')}}'></script>
+    </head>
+
+    <body>
+    </body>
+</html>
