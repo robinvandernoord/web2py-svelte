@@ -13,7 +13,7 @@
     }
 
     function add() {
-        const r = Math.floor(Math.random() * 100)
+        const r = Math.floor(Math.random() * 100);
         nested_data[`nest ${r}`] = {
             'value': Math.floor(Math.random() * 1000),
             'deeper': {'boolean': Math.random() < 0.5}
