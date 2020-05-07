@@ -63,34 +63,32 @@
     updatetime();
 </script>
 <main>
-    <div class="time">
-        Current time: {time}
-    </div>
-    <div class="{slow_class}">
-        {#await slow_function()}
-            still loading...
-        {:then data}
-            Finally! {data.result}
-        {:catch e}
-            This should not happen :( {e}
-        {/await}
-    </div>
-    <div class="failure">
-        {#await failing_function()}
-        {:then data}
-            This should never happen
-        {:catch e}
-            Something went wrong. ({e})
-        {/await}
-    </div>
-
-    <!-- using a component as if it were normal HTML -->
-    <Buttons />
-
-    <!-- if you want to use data in a component, you need to pass it -->
-
-
-    <div class="blue">
-        <Nested {nested_data} />
-    </div>
+    <ul class="list-group">
+        <li class="list-group-item time">Current time: {time}</li>
+        <li class="list-group-item {slow_class}">
+            {#await slow_function()}
+                still loading...
+            {:then data}
+                Finally! {data.result}
+            {:catch e}
+                This should not happen :( {e}
+            {/await}
+        </li>
+        <li class="list-group-item failure">
+            {#await failing_function()}
+            {:then data}
+                This should never happen
+            {:catch e}
+                Something went wrong. ({e})
+            {/await}
+        </li>
+        <li class="list-group-item">
+            <!-- using a component as if it were normal HTML -->
+            <Buttons />
+        </li>
+        <li class="list-group-item blue">
+            <!-- if you want to use data in a component, you need to pass it -->
+            <Nested {nested_data} />
+        </li>
+    </ul>
 </main>

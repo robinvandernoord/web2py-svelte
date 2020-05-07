@@ -8,7 +8,7 @@ const components = {Index, Alternate};
 const Component = components[view];
 
 const app = new Component({
-    target: document.body,
+    target: document.getElementById('content-main'),
     props: window.data,
 });
 

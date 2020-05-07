@@ -7,6 +7,7 @@
 # ---- example index page ----
 @svelte()
 def index():
+    response.flash = 'This still works too!'
     return {'name': 'backend'}
 
 
