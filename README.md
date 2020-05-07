@@ -8,7 +8,7 @@ Demo to integrate a [web2py](http://web2py.com/book) backend with a [Svelte](htt
 
 ## Installation
 - Python: throw this project in your web2py applications folder
-- Svelte: (from the `views/svelte` folder) run `npm install` and `npm run dev` (for development, live builds) or `npm run build` (for producting, manual builds)
+- Svelte: (from the `views/svelte` folder) run `npm install` and `npm run dev` (for development, live builds) or `npm run build` (for production, manual builds)
 
 ## Props/data
 All data that you return in the controller, will be passed as 'props' to the frontend page. This means you can use them as js variables.
