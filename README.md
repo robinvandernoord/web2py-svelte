@@ -40,5 +40,4 @@ Svelte is normally used for single-page applications (SPA), but there are multip
 - default/non_svelte shows that you can show pages without svelte
 
 ## TODO:
-- Use the web2py bootstrap css/js
 - Show inheritance of components (e.g. to make a Generic.svelte template that all pages use)
